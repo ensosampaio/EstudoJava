@@ -1,0 +1,16 @@
+package modularização;
+
+public class Raizes {
+public void calcularRaizes(Delta delta, double a, double b, double c) {
+	double X1;
+	double X2;
+	
+	X1 = (-b + Math.sqrt(delta.calcularDelta(a, b, c))) /(2*a);
+	X2 = (-b - Math.sqrt(delta.calcularDelta(a, b, c))) /(2*a);
+
+	
+	System.out.printf("O X1 é: %.2f",X1);
+	System.out.printf("\nO X2 é: %.2f",X2);
+
+}
+}

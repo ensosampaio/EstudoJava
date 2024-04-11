@@ -1,0 +1,38 @@
+package modularização;
+
+import java.util.Scanner;
+
+public class CalcularEquaçãoSegundoGrau {
+public static void main(String[] args) {
+	Scanner teclado = new Scanner(System.in);
+	
+	System.out.print("Digite o numero A: ");
+	double A = Double.parseDouble(teclado.nextLine());
+	
+	while (A == 0){
+		System.out.println("Valor inválido");
+		System.out.print("Digite o numero A: ");
+		A = Double.parseDouble(teclado.nextLine());
+	}
+	
+	
+	System.out.print("Digite o numero B: ");
+	double B = Double.parseDouble(teclado.nextLine());
+	
+	System.out.print("Digite o numero C: ");
+	double C = Double.parseDouble(teclado.nextLine());
+	
+
+	//Delta (classe) resultadoDelta (objeto) = new Delta();
+	Delta resultadoDelta = new Delta();
+	
+	System.out.println("Delta é: " + resultadoDelta.calcularDelta(A, B, C));
+	
+	
+	Raizes resultadoRaizes = new Raizes();
+	
+	resultadoRaizes.calcularRaizes(resultadoDelta, A, B, C);
+
+	teclado.close();
+}
+}

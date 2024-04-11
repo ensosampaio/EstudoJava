@@ -1,0 +1,8 @@
+package modularização;
+
+public class Delta {
+public void calcularDelta(double a, double b, double c) {
+	double resultadoDelta;
+	resultadoDelta = Math.pow(b, 2) - (4*a*c);
+	System.out.printf("delta é: %.2f", resultadoDelta);
+}}

@@ -1,0 +1,26 @@
+package simplesmente;
+import dados.Item;
+
+
+
+public class TestarAtividade10 {
+public static void main(String[] args) {
+	ListaSimples lista = new ListaSimples();
+	
+	int l1[] = {1,2,3};
+	int l2[] = {1,2,3};
+	
+	System.out.println(lista.igualdadeL1L2());
+
+
+
+
+
+
+
+
+
+
+
+}
+}

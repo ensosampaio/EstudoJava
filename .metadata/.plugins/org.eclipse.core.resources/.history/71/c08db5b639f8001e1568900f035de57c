@@ -1,0 +1,14 @@
+package modularização;
+
+public class Delta {
+public static double calcularDelta(double a, double b, double c) {
+	
+	double resultado;
+	resultado = Math.pow(b, 2) - (4*a*c);
+	if (resultado == 0) {
+		return 0;
+	}else {
+		return resultado;
+	}
+
+}}

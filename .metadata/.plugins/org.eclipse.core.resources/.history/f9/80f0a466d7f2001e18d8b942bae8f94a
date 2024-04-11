@@ -1,0 +1,27 @@
+package simplesmente;
+import dados.Item;
+
+
+
+public class TestarAtividade10 {
+public static void main(String[] args) {
+	ListaSimples lista = new ListaSimples();
+	
+	int l1[] = new int [3];
+	int l2[] = new int[3];
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+}

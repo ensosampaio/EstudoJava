@@ -1,0 +1,19 @@
+package classeData;
+
+public class DataTeste {
+public static void main(String[] args) {
+	Data p1 = new Data();
+	p1.ano = 2014;
+	p1.dia = 30;
+	p1.mes = 12;
+	
+	var p2 = new Data();
+	p2.ano = 2015;
+	p2.dia = 25;
+	p2.mes = 10;
+	
+	System.out.println(p1.ObterData());
+	System.out.println(p2.ObterData());
+	
+}
+}

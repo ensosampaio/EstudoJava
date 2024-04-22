@@ -9,11 +9,11 @@ public static void main(String[] args) {
 	
 	System.out.print("Digite o numero fatorial desejado: ");
 	double numero = teclado.nextDouble();
-	int contador = 1;
+	int i = 1;
 	int fatorial = 1;
 	
-	for (contador = 1; contador<=numero; contador++) {
-		fatorial *= contador;
+	for (i = 1; i<=numero; i++) {
+		fatorial *= i;
 	}
 	
 	System.out.printf("O fatorial (%.0f!) do numero %.0f é: %d", numero, numero,fatorial);

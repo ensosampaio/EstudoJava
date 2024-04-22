@@ -3,12 +3,12 @@ package simplesmente;
 import dados.Item;
 
 public class No {
-	private Item info; // a declara√ß√£o do tipo Item est√° no capitulo 1
+	private Item info; // a declaraÁ„o do tipo Item est· no capitulo 1
 	private No prox;
 
-	public No (Item elem){  // a variavel elem contem os dados que ser√£o armazenados
+	public No (Item elem){  // a vari·vel elem contÈm os dados que ser„o armazenados
 		this.info = elem;
-		this.prox = null; // esta linha e opcional, pois o prox e automaticamente 
+		this.prox = null; // esta linha È opcional, pois o prox È automaticamente 
 						//definido como null
 	}
 	public Item getInfo (){

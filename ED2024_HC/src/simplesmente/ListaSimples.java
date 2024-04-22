@@ -34,7 +34,7 @@ public class ListaSimples {
 	public boolean eVazia (){
 		return (this.prim == null);
 	}
-	//insere um novo nÃ³ no final da lista ou se a lista estiver vazia, insere o primeiro nÃ³ na lista
+	//insere um novo nó no final da lista ou se a lista estiver vazia, insere o primeiro nó na lista
 	public void inserirUltimo (Item elem){
 		No novoNo = new No (elem);
 		if (this.eVazia()){
@@ -45,7 +45,7 @@ public class ListaSimples {
 		this.ult = novoNo;
 		this.quantNos++;
 	}
-	//retorna o endereÃ§o do nÃ³ que estÃ¡ contendo o valor a ser procurado.
+	//retorna o endereço do nó que está contendo o valor a ser procurado.
 	public No pesquisarNo (int chave){
 		No atual = this.prim;
 		while ((atual != null) && (atual.getInfo().getChave() != chave)){
@@ -53,8 +53,8 @@ public class ListaSimples {
 		}	
 		return atual;
 	}
-	//remove um determinado nÃ³ em qualquer posiÃ§Ã£o na lista.
-	public boolean removerNo1 (int chave) {
+	//remove um determinado nó em qualquer posição na lista.
+	public boolean removerNo (int chave) {
 		No atual = this.prim;
 		No ant = null;
 		if (this.eVazia()){
@@ -84,16 +84,16 @@ public class ListaSimples {
 			}
 		}
 	}
-	//outra forma de escrever o mÃ©todo para remover determinado NÃ³
-	public boolean removerNo(int x){
+	//outra forma de escrever o método para remover determinado Nó
+	public boolean removerNó(int x){
 		if (this.eVazia()){
 			return false;
 		}else{
 			if (this.prim.getInfo().getChave()==x){
-				if (this.prim.getProx()==null){//se for ï¿½nico nï¿½ da lista
+				if (this.prim.getProx()==null){//se for único nó da lista
 					this.ult = null;
 				}
-				//remover o primeiro nï¿½ da lista
+				//remover o primeiro nó da lista
 				this.prim = this.prim.getProx();
 			}else{
 				No atual = this.prim;
@@ -101,13 +101,13 @@ public class ListaSimples {
 						(atual.getProx().getInfo().getChave()!=x)){
 					atual = atual.getProx();
 				}
-				if (atual.getProx()==null){//nï¿½o achou o valor na lista
+				if (atual.getProx()==null){//não achou o valor na lista
 					return false;
 				}else{
-					if (atual.getProx()==this.ult){//se for o ï¿½ltimo nï¿½
+					if (atual.getProx()==this.ult){//se for o último nó
 						atual.setProx(null);
 						this.ult = atual;
-					}else{	//remove o nï¿½ no meio da lista
+					}else{	//remove o nó no meio da lista
 						atual.setProx(atual.getProx().getProx());
 					}
 				}
@@ -117,7 +117,7 @@ public class ListaSimples {
 
 		}
 	}
-	//mostra todo o conteï¿½do da lista
+	//mostra todo o conteúdo da lista
 	public String toString(){
 		String msg = "";
 		No atual = this.prim;
@@ -159,9 +159,9 @@ public class ListaSimples {
 	}
 	//atividade 02 - questao 09
 	public String procurarPar() {
-		String resposta ="Nï¿½meros pares da lista\n";
+		String resposta ="Números pares da lista\n";
 		if (this.eVazia()) {
-			return "A lista estï¿½ vazia";
+			return "A lista está vazia";
 		}else {
 			No atual = this.prim;
 			while (atual != null) {
@@ -173,91 +173,11 @@ public class ListaSimples {
 		}
 		return resposta;
 	}
-	// exercicio 10
-	public boolean igualdadeL1L2(ListaSimples L1, ListaSimples L2) {
-		
-		if (this.eVazia() || L1.eVazia()) {
-			return false;
-		}
-		No atualL1 = this.prim;
-		No atualL2 = L1.prim;
-		
-		while (atualL1 != null && atualL2 != null) {
-			if (atualL1.getInfo().getChave() != atualL2.getInfo().getChave()) {
-				return false;
-			}else {
-				return true;
-			}
-		}
-		return false;
-	}
+
+
+
+
+
 	
-
-	// exercicio 11
-	public double trocarNumero() {
-		
-		if (this.eVazia()) {
-			return 0;
-		}
-		
-		double trocar = 50;
-		No atual = this.prim;
-		
-		while (atual != null) {
-			if (atual.getInfo().getChave() == 10) {
-				trocar = atual.getInfo().getChave();
-				atual.getInfo().setChave(50);
-			}
-			atual = atual.getProx();
-		}
-		
-		
-		
-		
-		
-		
-		return trocar;
-		
+	
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}

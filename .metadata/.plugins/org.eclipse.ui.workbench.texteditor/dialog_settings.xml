@@ -6,8 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="buscarCliente"/>
+		<item key="selection" value="printarResultado"/>
 		<list key="findhistory">
+			<item value="performSortAndPrintResults"/>
+			<item value="+= 3"/>
+			<item value="resetCounters"/>
+			<item value="moves"/>
+			<item value="comparisons"/>
+			<item value="+=3"/>
 			<item value="is"/>
 			<item value="buscarCliente"/>
 			<item value="Clientes"/>
@@ -18,6 +24,12 @@
 			<item value="tela"/>
 		</list>
 		<list key="replacehistory">
+			<item value="printarResultado"/>
+			<item value=""/>
+			<item value="+= 1"/>
+			<item value="resetarContadores"/>
+			<item value="movimentos"/>
+			<item value="comparacao"/>
 			<item value="Cliente"/>
 			<item value="parte"/>
 			<item value="funcionario"/>
@@ -25,8 +37,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="807"/>
-		<item key="DIALOG_Y_ORIGIN" value="288"/>
+		<item key="DIALOG_X_ORIGIN" value="1204"/>
+		<item key="DIALOG_Y_ORIGIN" value="228"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

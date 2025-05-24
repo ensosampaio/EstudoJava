@@ -33,7 +33,9 @@ public class UsandoVetor {
 		System.out.println("Digite a chave que voce quer procurar: ");
 		int chave = Integer.parseInt(teclado.nextLine());
 
-		compararPesquisas(vetor, chave);
+		contarSequencial(vetor, chave);
+		contarBinaria(vetor, chave);
+		contarHash(vetor, chave);
 		teclado.close();
 	}
 
@@ -52,37 +54,44 @@ public class UsandoVetor {
 			int valor = random.nextInt(10000);
 			Item item = new Item(valor);
 			vetor.inserirDados(item);
+
 		}
 	}
 
-	public static void compararPesquisas(Vetor vetor, int chave) {
+	public static void contarSequencial(Vetor vetor, int chave) {
 		long startTimeSeq = System.nanoTime();
 		int indiceSeq = vetor.pesquisaSequencial(chave);
 		long endTimeSeq = System.nanoTime();
 		long tempoSeq = endTimeSeq - startTimeSeq;
 
+		System.out.println("Pesquisa Sequencial:");
+		System.out.println("Índice: " + (indiceSeq != -1 ? indiceSeq : "não encontrado"));
+		System.out.println("Tempo: " + tempoSeq + " ns");
+		System.out.println("Comparações: " + vetor.getComparacoesSeq());
+	}
+
+	public static void contarBinaria(Vetor vetor, int chave) {
+		vetor.bubblesort();
 		long startTimeBin = System.nanoTime();
 		int indiceBin = vetor.pesquisaBinaria(chave);
 		long endTimeBin = System.nanoTime();
 		long tempoBin = endTimeBin - startTimeBin;
 
+		System.out.println("\nPesquisa Binária:");
+		System.out.println("Índice: " + (indiceBin != -1 ? indiceBin : "não encontrado"));
+		System.out.println("Tempo: " + tempoBin + " ns");
+		System.out.println("Comparações: " + vetor.getComparacoesBin());
+	}
+
+	public static void contarHash(Vetor vetor, int chave) {
 		long startTimeHash = System.nanoTime();
 		int indiceHash = vetor.pesquisaHashing(chave);
 		long endTimeHash = System.nanoTime();
 		long tempoHash = endTimeHash - startTimeHash;
 
-		System.out.println("Pesquisa Sequencial:");
-		System.out.println("Índice: " + (indiceSeq != -1 ? indiceSeq : "não encontrado"));
-		System.out.println("Tempo: " + tempoSeq + " ns");
-		System.out.println("Comparações: " + vetor.getComparacoesSeq());
-
-		System.out.println("\nPesquisa Binária:");
-		System.out.println("Índice: " + (indiceBin != -1 ? indiceBin : "não encontrado"));
-		System.out.println("Tempo: " + tempoBin + " ns");
-		System.out.println("Comparações: " + vetor.getComparacoesBin());
-
 		System.out.println("\nPesquisa Hashing:");
 		System.out.println("Índice: " + (indiceHash != -1 ? indiceHash : "não encontrado"));
 		System.out.println("Tempo: " + tempoHash + " ns");
 	}
+
 }

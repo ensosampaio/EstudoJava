@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="printarResultado"/>
+		<item key="selection" value="da"/>
 		<list key="findhistory">
+			<item value="da"/>
+			<item value="clinica"/>
 			<item value="performSortAndPrintResults"/>
 			<item value="+= 3"/>
 			<item value="resetCounters"/>
@@ -21,11 +23,12 @@
 			<item value="conta"/>
 			<item value="parts"/>
 			<item value="cliente"/>
-			<item value="tela"/>
 		</list>
 		<list key="replacehistory">
-			<item value="printarResultado"/>
+			<item value="do"/>
+			<item value="hospital"/>
 			<item value=""/>
+			<item value="printarResultado"/>
 			<item value="+= 1"/>
 			<item value="resetarContadores"/>
 			<item value="movimentos"/>

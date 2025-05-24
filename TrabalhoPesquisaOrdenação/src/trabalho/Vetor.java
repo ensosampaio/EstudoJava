@@ -78,7 +78,6 @@ public class Vetor {
 	}
 
 	public int pesquisaBinaria(int chave) {
-		bubblesort();
 		comparacoesBin = 0;
 		int esquerda = 0;
 		int direita = nElem - 1;
@@ -88,10 +87,15 @@ public class Vetor {
 			int meio = (esquerda + direita) / 2;
 			if (vetor[meio].getChave() == chave) {
 				return meio;
-			} else if (vetor[meio].getChave() < chave) {
-				esquerda = meio + 1;
 			} else {
-				direita = meio - 1;
+				comparacoesBin++;
+				if (vetor[meio].getChave() < chave) {
+
+					esquerda = meio + 1;
+
+				} else {
+					direita = meio - 1;
+				}
 			}
 		}
 		return -1;
@@ -105,12 +109,12 @@ public class Vetor {
 		return hashMap.getOrDefault(chave, -1);
 	}
 
-	 public String imprimirVetor() {
-	        StringBuilder resultado = new StringBuilder();
-	        for (int i = 0; i < nElem; i++) {
-	            resultado.append(vetor[i].getChave()).append(" ");
-	        }
-	        return resultado.toString();
-	    }
+	public String imprimirVetor() {
+		StringBuilder resultado = new StringBuilder();
+		for (int i = 0; i < nElem; i++) {
+			resultado.append(vetor[i].getChave()).append(" ");
+		}
+		return resultado.toString();
+	}
 
 }
